@@ -7,7 +7,7 @@ A lightweight job-referral marketplace MVP for validating early demand in the jo
 - Next.js 14
 - TypeScript
 - Tailwind CSS
-- SQLite (local MVP data store)
+- In-memory storage (serverless-safe MVP)
 
 ## What is included
 
@@ -18,7 +18,7 @@ A lightweight job-referral marketplace MVP for validating early demand in the jo
 - Early-access waitlist form
 - Admin dashboard with basic metrics and tables
 - Simple analytics event logging
-- Local SQLite database with realistic demo data
+- Demo job data
 - SEO metadata, robots, and sitemap
 
 ## Getting started
@@ -53,12 +53,37 @@ admin123
 
 Then visit `/admin/login` and sign in.
 
-## Database
+## Data storage
 
-The application stores data in `data/referral-mvp.db` and creates tables automatically on first run.
+The application uses in-memory storage for MVP validation:
+- Demo jobs are always available
+- Submissions (waitlist, referrals, referrers) are stored in memory during the session
+- Data resets when the app restarts (this is intentional for MVP validation)
+- For production, connect to a real database (PostgreSQL, MongoDB, etc.)
+
+## Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Connect your GitHub repo to Vercel (https://vercel.com)
+3. Add environment variables:
+   - `NEXT_PUBLIC_SITE_URL` = your Vercel domain (e.g., `https://your-app.vercel.app`)
+   - `ADMIN_PASSWORD` = your admin password (e.g., `admin123`)
+4. Deploy
+
+### Local
+
+```bash
+npm run build
+npm run start
+```
+
+Then open http://localhost:3000
 
 ## Notes
 
 - Demo/sample job listings are intentionally marked as sample data.
-- Resume uploads are saved locally under `data/uploads` for MVP validation.
-- The code is built to be easy to iterate on as testing reveals the best landing page message and conversion flow.
+- Resume uploads are stored temporarily in memory.
+- The code is optimized for easy iteration as testing reveals the best landing page message and conversion flow.
+- This MVP is designed for validation, not production use.
