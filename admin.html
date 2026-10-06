@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a Referrer | ReferBridge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">R</span>
+          <span>ReferBridge</span>
+        </a>
+        <nav class="nav-links">
+          <a href="jobs.html">Jobs</a>
+          <a href="refer.html">Become a Referrer</a>
+          <a href="admin.html">Admin</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-secondary" href="refer.html">Become a Referrer</a>
+          <a class="btn btn-primary" href="jobs.html">Find Jobs</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-pad">
+      <div class="card form-card">
+        <p class="eyebrow">Referrer</p>
+        <h1>Submit an opening</h1>
+        <p class="muted">Share a role you believe may be suitable for qualified applicants. This MVP is intentionally simple and does not require a full authentication system.</p>
+
+        <form id="referrerForm" class="job-form">
+          <div class="form-row two-col">
+            <div>
+              <label>Name</label>
+              <input type="text" name="name" required />
+            </div>
+            <div>
+              <label>Email</label>
+              <input type="email" name="email" required />
+            </div>
+          </div>
+
+          <div class="form-row two-col">
+            <div>
+              <label>Company</label>
+              <input type="text" name="company" required />
+            </div>
+            <div>
+              <label>Job title</label>
+              <input type="text" name="jobTitle" required />
+            </div>
+          </div>
+
+          <div class="form-row two-col">
+            <div>
+              <label>LinkedIn</label>
+              <input type="url" name="linkedin" required />
+            </div>
+            <div>
+              <label>Job opening URL</label>
+              <input type="url" name="jobOpeningUrl" required />
+            </div>
+          </div>
+
+          <div class="form-row two-col">
+            <div>
+              <label>Role</label>
+              <input type="text" name="role" required />
+            </div>
+            <div>
+              <label>Location</label>
+              <input type="text" name="location" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label>Are you currently employed at the company?</label>
+              <select name="currentlyEmployed" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label>Referral eligibility / relationship</label>
+              <textarea name="relationship" rows="4" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label>Additional notes</label>
+              <textarea name="notes" rows="4"></textarea>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Submit Opportunity</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

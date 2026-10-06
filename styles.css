@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | ReferBridge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">R</span>
+          <span>ReferBridge</span>
+        </a>
+        <nav class="nav-links">
+          <a href="jobs.html">Jobs</a>
+          <a href="refer.html">Become a Referrer</a>
+          <a href="admin.html">Admin</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="index.html">Back to site</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-pad">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Dashboard</p>
+          <h1>Admin overview</h1>
+        </div>
+      </div>
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <span>Interested users</span>
+          <strong id="totalWaitlist">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Jobs</span>
+          <strong id="totalJobs">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Referral requests</span>
+          <strong id="totalRequests">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Referrer submissions</span>
+          <strong id="totalReferrers">0</strong>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <div class="admin-card">
+          <h3>Waitlist by user type</h3>
+          <div id="userTypeBreakdown" class="list-stack"></div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Analytics</h3>
+          <div id="analyticsBreakdown" class="list-stack"></div>
+        </div>
+      </section>
+
+      <section class="dashboard-grid three-col">
+        <div class="admin-card">
+          <h3>Waitlist users</h3>
+          <div id="waitlistList" class="item-list"></div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Candidates</h3>
+          <div id="requestsList" class="item-list"></div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Referrers</h3>
+          <div id="referrersList" class="item-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

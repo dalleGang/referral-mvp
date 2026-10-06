@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReferBridge | Get Referred to Better Jobs</title>
+    <meta name="description" content="Discover job opportunities where employees and referrers can help qualified candidates get referred. Honest, transparent, and designed for early validation." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">R</span>
+          <span>ReferBridge</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="jobs.html">Jobs</a>
+          <a href="refer.html">Become a Referrer</a>
+          <a href="admin.html">Admin</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="btn btn-secondary" href="refer.html">Become a Referrer</a>
+          <a class="btn btn-primary" href="jobs.html">Find Jobs</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="pill">Early access</span>
+            <h1>Stop applying blindly. Get referred.</h1>
+            <p class="lead">
+              Discover job opportunities where people inside companies can help qualified candidates get reviewed.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="jobs.html">Find Jobs</a>
+              <a class="btn btn-secondary" href="refer.html">Become a Referrer</a>
+            </div>
+
+            <ul class="trust-points">
+              <li>Honest referral matching</li>
+              <li>Mobile-first job discovery</li>
+              <li>Referral availability depends on referrer and company</li>
+            </ul>
+          </div>
+
+          <div class="flow-card">
+            <div class="flow-step">
+              <span class="step-label">Job Opening</span>
+              <strong>Frontend Engineer</strong>
+              <small>Bengaluru • Hybrid</small>
+            </div>
+            <div class="arrow">→</div>
+            <div class="flow-step">
+              <span class="step-label">Referrer</span>
+              <strong>Senior PM</strong>
+              <small>Eligible reviewer</small>
+            </div>
+            <div class="arrow">→</div>
+            <div class="flow-step">
+              <span class="step-label">Candidate</span>
+              <strong>Profile + Resume</strong>
+              <small>Submitted for review</small>
+            </div>
+            <div class="arrow">→</div>
+            <div class="flow-step alt">
+              <span class="step-label">Outcome</span>
+              <strong>Referral or interview opportunity</strong>
+              <small>Not guaranteed</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading-row">
+          <div>
+            <p class="eyebrow">Featured roles</p>
+            <h2>Sample referral opportunities</h2>
+          </div>
+          <a class="btn btn-secondary" href="jobs.html">View all jobs</a>
+        </div>
+
+        <div id="featuredJobs" class="job-grid"></div>
+      </section>
+
+      <section class="section container">
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="icon">✓</div>
+            <h3>Find relevant roles</h3>
+            <p>Browse openings by company, title, location, and experience level.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">✓</div>
+            <h3>Submit your profile</h3>
+            <p>Share resume details and your motivation through a simple form.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">✓</div>
+            <h3>Track referrals</h3>
+            <p>Keep candidates informed without promising an outcome before review.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section waitlist-wrap">
+        <div class="container waitlist-box">
+          <div>
+            <p class="eyebrow light">Validation-first</p>
+            <h2>Join the Early Access List</h2>
+            <p>We will share relevant jobs and opportunities as soon as they become available.</p>
+          </div>
+
+          <form id="waitlistForm" class="waitlist-form">
+            <div class="form-row two-col">
+              <div>
+                <label>Name</label>
+                <input type="text" name="name" required />
+              </div>
+              <div>
+                <label>Email</label>
+                <input type="email" name="email" required />
+              </div>
+            </div>
+
+            <div class="form-row two-col">
+              <div>
+                <label>User type</label>
+                <select name="userType">
+                  <option>Job seeker</option>
+                  <option>Referrer</option>
+                  <option>Recruiter</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label>Desired role</label>
+                <input type="text" name="desiredRole" />
+              </div>
+            </div>
+
+            <div class="form-row two-col">
+              <div>
+                <label>Experience</label>
+                <input type="text" name="experience" placeholder="0–2 years" />
+              </div>
+              <div>
+                <label>Location</label>
+                <input type="text" name="location" placeholder="Bengaluru" />
+              </div>
+            </div>
+
+            <button class="btn btn-light" type="submit">Join the Early Access List</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>ReferBridge</h3>
+          <p>Demo platform for validation. Referrals do not guarantee interviews or employment.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="refer.html">Submit opportunity</a></li>
+            <li><a href="admin.html">Admin</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Trust</h4>
+          <ul>
+            <li><a href="index.html#">Why this exists</a></li>
+            <li><a href="jobs.html">Job marketplace</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

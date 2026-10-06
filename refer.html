@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Detail | ReferBridge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">R</span>
+          <span>ReferBridge</span>
+        </a>
+        <nav class="nav-links">
+          <a href="jobs.html">Jobs</a>
+          <a href="refer.html">Become a Referrer</a>
+          <a href="admin.html">Admin</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-secondary" href="refer.html">Become a Referrer</a>
+          <a class="btn btn-primary" href="jobs.html">Find Jobs</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-pad">
+      <a class="back-link" href="jobs.html">← Back to jobs</a>
+
+      <div class="detail-layout">
+        <article id="jobDetail" class="detail-card"></article>
+
+        <aside class="sidebar-card">
+          <p class="eyebrow">Apply</p>
+          <h3>Request referral</h3>
+          <p class="muted">This does not guarantee an interview or job. Referrer availability depends on internal company process.</p>
+          <a href="#referral-form" class="btn btn-primary full-width">Request Referral</a>
+        </aside>
+      </div>
+
+      <section id="referral-form" class="detail-form-card">
+        <h2>Submit your profile for this referral opportunity</h2>
+        <form id="referralRequestForm" class="job-form">
+          <input type="hidden" name="jobId" id="jobId" />
+
+          <div class="form-row two-col">
+            <div>
+              <label>Full name</label>
+              <input type="text" name="fullName" required />
+            </div>
+            <div>
+              <label>Email</label>
+              <input type="email" name="email" required />
+            </div>
+          </div>
+
+          <div class="form-row two-col">
+            <div>
+              <label>Phone</label>
+              <input type="tel" name="phone" required />
+            </div>
+            <div>
+              <label>LinkedIn URL</label>
+              <input type="url" name="linkedinUrl" required />
+            </div>
+          </div>
+
+          <div class="form-row two-col">
+            <div>
+              <label>Years of experience</label>
+              <input type="text" name="yearsOfExperience" required />
+            </div>
+            <div>
+              <label>Current location</label>
+              <input type="text" name="currentLocation" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label>Skills</label>
+              <input type="text" name="skills" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label>Resume upload</label>
+              <input type="file" name="resume" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label>Why are you a good fit for this role?</label>
+              <textarea name="motivation" rows="5" required></textarea>
+            </div>
+          </div>
+
+          <label class="checkbox-row">
+            <input type="checkbox" name="consent" required />
+            <span>I confirm the information is accurate and understand referral availability is not guaranteed.</span>
+          </label>
+
+          <button class="btn btn-primary" type="submit">Request Referral</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
