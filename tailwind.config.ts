@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import colors from 'tailwindcss/colors';
 
 const config: Config = {
   content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}', './lib/**/*.{js,ts,jsx,tsx,mdx}'],
@@ -8,12 +9,13 @@ const config: Config = {
         brand: {
           50: '#f2f7ff',
           100: '#dfeeff',
+          200: '#bfd8ff',
           500: '#1e5eff',
           600: '#194fe5',
           700: '#133eb3'
         },
         ink: '#0f172a',
-        slate: '#e2e8f0'
+        slate: colors.slate
       },
       boxShadow: {
         soft: '0 10px 30px rgba(15,23,42,0.08)'

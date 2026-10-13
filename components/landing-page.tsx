@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Building2, BriefcaseBusiness, BadgeCheck, Sparkles, ChevronRight } from 'lucide-react';
-import { SITE_CONFIG } from '@/lib/site-config';
+import { SITE_CONFIG } from '@/lib/seed-data';
 import { JobRecord } from '@/lib/types';
 
 export function LandingPage({ jobs }: { jobs: JobRecord[] }) {
